@@ -14,3 +14,7 @@ O, And for if you, As you, As I
 But that you to me now, how hard
 that our night of time, And soon
 ```
+
+## Thanks to
+
+Sonnets are held at [MIT's website](http://shakespeare.mit.edu/Poetry/sonnets.html).
