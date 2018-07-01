@@ -16,9 +16,7 @@ def parseSonnet(sonnet):
 Is End Punc
 '''
 def isEndPunc(word):
-    if word in ['.', '!', '?']:
-        return True
-    return False
+    return word in ['.', '!', '?']
 
 '''
 Parse Word
