@@ -4,5 +4,10 @@ from data import Sonnets
 
 
 if __name__ == '__main__':
-    cache = build_word_cache(Sonnets)
+    s = list(Sonnets.values())
+    sonnets = []
+    for sonnet in s:
+        sonnets.extend(sonnet.split('\n'))
+    cache = build_word_cache([" ".join(sonnets)])
+
     print(generate_sonnet(cache))

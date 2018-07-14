@@ -46,20 +46,17 @@ def generate_sonnet(word_cache):
         word = START
         line = []
         length = 0
-        for i in range(100):
+        for i in range(30):
             word = choose_next(word)
-            if word == None: break
             length += len(word)
-            if (len(line) + length) > 35: return line
-            if word == END:
-                break
+            if (len(line) + length - 1) > 30: return line
+            if word == END: break
             line.append(word)
-
         if len(line) < min_length: return generate_line(min_length)
         return line
 
     sonnet = []
-    for i in range(random.randint(4, 8)):
+    for i in range(random.randint(4, 16)):
         line = generate_line(30)
         line = to_original_words(line, word_cache)
         finished = ''
