@@ -17,5 +17,9 @@ def save_sonnets():
     for title in sonnets:
         text = sonnets[title]
         path = os.path.abspath('sonnets/' + title + '.txt')
+        print("Saving: " + path)
         with open(path, 'w+') as f:
             f.write(text)
+
+if __name__ == '__main__':
+    save_sonnets()
