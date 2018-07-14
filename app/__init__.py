@@ -1,8 +1,8 @@
 from cache import build_word_cache
 from sonnet import generate_sonnet
-from scrape import get_sonnets_from_files
+from data import Sonnets
 
 
 if __name__ == '__main__':
-    cache = build_word_cache(get_sonnets_from_files())
+    cache = build_word_cache(Sonnets)
     print(generate_sonnet(cache))

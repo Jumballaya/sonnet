@@ -21,5 +21,28 @@ def save_sonnets():
         with open(path, 'w+') as f:
             f.write(text)
 
+def make_file():
+    sonnets = get_titles()
+    dataFile = os.path.abspath('app/data.py')
+
+    with open(dataFile, 'w+') as f:
+        f.write("'''")
+        f.write('\n')
+        f.write('Sonnets data -- Text of all the sonnets')
+        f.write('\n')
+        f.write("'''")
+        f.write('\n')
+        f.write('\n')
+        f.write('Sonnets = {')
+        f.write('\n')
+
+        for title in sonnets:
+            text = sonnets[title]
+            f.write('\t"' + title + '":' + "'''" + text + "''',\n")
+
+        f.write('}')
+
+
+
 if __name__ == '__main__':
-    save_sonnets()
+    make_file()
