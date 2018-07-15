@@ -1,5 +1,7 @@
 # Sonnet
 
+[You can generate sonnets here](http://sonnet.pgbdev.com)
+
 To run: `python app/__init__.py` will generate a sonnet
 
 ## Example
