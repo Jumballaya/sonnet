@@ -1,6 +1,6 @@
-from cache import build_word_cache
-from sonnet import generate_sonnet
-from data import Sonnets
+from app.cache import build_word_cache
+from app.sonnet import generate_sonnet
+from app.data import Sonnets
 
 
 def generate():

@@ -1,6 +1,6 @@
 # Sonnet
 import random
-from cache import START, END
+from app.cache import START, END
 
 '''
 To Original Words
