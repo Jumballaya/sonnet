@@ -2,11 +2,18 @@ import json
 from app.generate import generate
 from app.data import Sonnets
 
+headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "*",
+    "Access-Control-Allow-Credentials": True,
+    "Content-Type": "application/json"
+}
 
 def shakespeare(event, context):
     return {
         "statusCode": 200,
-        "body": json.dumps({ "sonnet": generate() })
+        "body": json.dumps({ "sonnet": generate() }),
+        "headers": headers
     }
 
 def get_sonnet(event, context):
@@ -14,7 +21,8 @@ def get_sonnet(event, context):
     if _id == None:
         return {
             "statusCode": 400,
-            "body": json.dumps({ "error": "no id provided" })
+            "body": json.dumps({ "error": "no id provided" }),
+            "headers": headers,
         }
     body = {}
     statusCode = 200
@@ -41,5 +49,6 @@ def get_sonnet(event, context):
 
     return {
         "statusCode": statusCode,
-        "body": json.dumps(body)
+        "body": json.dumps(body),
+        "headers": headers,
     }

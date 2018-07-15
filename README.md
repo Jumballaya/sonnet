@@ -15,6 +15,10 @@ But that you to me now, how hard
 that our night of time, And soon
 ```
 
+## Serverless
+
+This is set up to deploy a python app to AWS Lambda and API Gateway
+
 ## Thanks to
 
 Sonnets are held at [MIT's website](http://shakespeare.mit.edu/Poetry/sonnets.html).
