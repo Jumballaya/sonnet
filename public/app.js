@@ -1,5 +1,18 @@
 /* global axios document */
 
+// Ready
+function ready(fn) {
+  if (
+    document.attachEvent
+      ? document.readyState === 'complete'
+      : document.readyState !== 'loading'
+  ) {
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
 // Generate sonnet and append the text to the DOM
 function handleGenerateClick() {
   function handleGenerate(text) {
@@ -25,5 +38,11 @@ function handleGenerateClick() {
     .catch(console.log);
 }
 
-handleGenerateClick();
-document.addEventListener('click', handleGenerateClick);
+ready(() => {
+  handleGenerateClick();
+  const btn = document.querySelector('button');
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    handleGenerateClick();
+  });
+});
