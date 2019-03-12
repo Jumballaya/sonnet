@@ -1,6 +1,6 @@
 # Sonnet
 
-[You can generate sonnets here](http://sonnet.pgbdev.com)
+[You can generate sonnets here](http://sonnet.pgbdev.com.s3-website-us-east-1.amazonaws.com/)
 
 To run: `python app/__init__.py` will generate a sonnet
 
